@@ -1,194 +1,341 @@
+
 <!DOCTYPE html>
 <html lang="ja">
+
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Lane Frontier</title>
-  <link rel="stylesheet" href="style.css" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Lane Frontier | レーンフロンティア</title>
+
+  <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
 
-<div class="menu-overlay"></div>
+  <div class="menu-overlay"></div>
 
-<aside class="mobile-menu">
+  <!-- スマホメニュー -->
+  <aside class="mobile-menu">
 
-  <button class="close-menu">×</button>
-
-  <nav class="mobile-nav">
-
-    <button class="mobile-about">
-      レーンフロンティアとは
+    <button class="close-menu" aria-label="メニューを閉じる">
+      ×
     </button>
 
-    <div class="mobile-submenu">
+    <nav class="mobile-nav">
 
-      <a href="#about-game">どんなゲーム？</a>
-      <a href="#about-world">世界観</a>
-      <a href="#about-team">製作者</a>
+      <button class="mobile-about">
+        レーンフロンティアとは
+      </button>
 
-    </div>
+      <div class="mobile-submenu">
+        <a href="about.html#about-game">どんなゲーム？</a>
+        <a href="about.html#about-world">世界観</a>
+        <a href="about.html#about-team">製作者</a>
+      </div>
 
-    <a href="rules.html">ルール</a>
-    <a href="#news">お知らせ</a>
-    <a href="#faq">FAQ</a>
-    <a href="#contact">お問い合わせ</a>
+      <a href="rules.html">ルール</a>
+      <a href="#news">お知らせ</a>
+      <a href="#contact">お問い合わせ</a>
 
-  </nav>
+    </nav>
 
-</aside>
+  </aside>
 
-<!-- Sticky Header -->
-<header class="site-header">
+
+  <!-- ヘッダー -->
+  <header class="site-header">
+
     <div class="container header-inner">
+
       <button class="menu-toggle" aria-label="メニューを開く">
-  ☰
-</button>
-      <a class="brand" href="index.html" aria-label="Lane Frontier トップ">
-        <span class="brand-icon" aria-hidden="true">🎮</span>
-        <span class="brand-name">Lane Frontier</span>
+        ☰
+      </button>
+
+      <a class="brand" href="index.html">
+
+        <img
+          src="hero-logo.jpg"
+          alt=""
+          class="lf-header-logo">
+
+        <span class="brand-name">
+          Lane Frontier
+        </span>
+
       </a>
 
-      <nav class="global-nav" aria-label="グローバルナビゲーション">
+
+      <nav class="global-nav">
+
         <ul class="nav-list">
-          <!-- hoverで開く（そのまま押しても反応なし、に合わせて button + menu） -->
+
           <li class="nav-item has-dropdown">
-  <button class="nav-link nav-button" type="button">
-    レーンフロンティアとは
-  </button>
 
-  <ul class="dropdown">
-    <li><a href="#about-game">どんなゲーム？</a></li>
-    <li><a href="#about-world">世界観</a></li>
-    <li><a href="#about-team">製作者</a></li>
-  </ul>
-</li>
+            <button
+              class="nav-link nav-button"
+              type="button">
 
-          <li class="nav-item"><a class="nav-link" href="rules.html">ルール</a></li>
-          <li class="nav-item"><a class="nav-link" href="#news">お知らせ</a></li>
-          <li class="nav-item"><a class="nav-link" href="#faq">FAQ</a></li>
-          <li class="nav-item"><a class="nav-link" href="#contact">お問い合わせ</a></li>
+              レーンフロンティアとは
+
+            </button>
+
+            <ul class="dropdown">
+
+              <li>
+                <a href="about.html#about-game">
+                  どんなゲーム？
+                </a>
+              </li>
+
+              <li>
+                <a href="about.html#about-world">
+                  世界観
+                </a>
+              </li>
+
+              <li>
+                <a href="about.html#about-team">
+                  製作者
+                </a>
+              </li>
+
+            </ul>
+
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link" href="rules.html">
+              ルール
+            </a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link" href="#news">
+              お知らせ
+            </a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link" href="#contact">
+              お問い合わせ
+            </a>
+          </li>
+
         </ul>
+
       </nav>
-     
+
     </div>
+
   </header>
 
-  <main id="home">
-    <section class="hero">
-      <div class="container">
-        <div class="hero-top">
-          <h1 class="hero-title">Lane Frontier</h1>
-        </div>
 
-        <div class="slider" aria-label="トップスライド">
-          <button class="slider-btn prev" type="button" aria-label="前の画像">‹</button>
+  <main>
 
-          <div class="slides" id="slides">
-            <div class="slide is-active" aria-label="図1">
-              <div class="slide-placeholder">図1</div>
-            </div>
-            <div class="slide" aria-label="図2">
-              <div class="slide-placeholder">図2</div>
-            </div>
-            <div class="slide" aria-label="図3">
-              <div class="slide-placeholder">図3</div>
-            </div>
+    <!-- メインビジュアル -->
+    <section class="hero lf-hero">
+
+      <div class="container lf-hero-grid">
+
+        <!-- 左側：ロゴ・説明 -->
+        <div class="lf-hero-copy">
+
+          <p class="lf-hero-eyebrow">
+            ORIGINAL STRATEGY CARD GAME
+          </p>
+
+          <h1 class="lf-hero-logo">
+
+            <img
+              src="hero-logo.jpg"
+              alt="LANE FRONTIER レーンフロンティア">
+
+          </h1>
+
+          <p class="lf-hero-catch">
+            領土を拓き、敵城を目指せ。
+          </p>
+
+          <p class="lf-hero-description">
+            領土を開拓し、モンスターを進軍させる。<br>
+            一手一手が勝敗を変える、戦略カードゲーム。
+          </p>
+
+          <div class="hero-actions lf-hero-actions">
+
+            <a
+              class="btn btn-primary"
+              href="about.html#about-game">
+
+              ゲームについて →
+
+            </a>
+
+            <a
+              class="btn btn-ghost"
+              href="rules.html">
+
+              ルールを見る →
+
+            </a>
+
           </div>
 
-          <button class="slider-btn next" type="button" aria-label="次の画像">›</button>
+          <p class="lf-hero-credit">
+            ORIGINAL ARTWORK BY THE LANE FRONTIER TEAM
+          </p>
+
         </div>
 
-        <div class="hero-actions">
-          <a class="btn btn-primary" href="rules.html">ルールを見る</a>
-          <a class="btn btn-ghost" href="#news">最新情報</a>
+
+        <!-- 右側：原画＋カード -->
+        <div class="lf-hero-visual">
+
+          <!-- 原画 -->
+          <div class="lf-art-panel">
+
+            <img
+              src="hero-art.jpg"
+              alt="強襲するワイバーンのオリジナル原画">
+
+          </div>
+
+          <!-- 完成カード -->
+          <img
+            class="lf-card-overlay"
+            src="hero-card.jpg"
+            alt="強襲するワイバーンの完成カード">
+
+          <span class="lf-visual-caption">
+            FROM ARTWORK TO CARD
+          </span>
+
         </div>
-       
+
       </div>
+
     </section>
 
 
+    <!-- お知らせ -->
     <section class="section" id="news">
+
       <div class="container">
-        <h2 class="section-title">お知らせ</h2>
+
+        <h2 class="section-title">
+          お知らせ
+        </h2>
 
         <ul class="news-list">
+
           <li class="news-item">
-            <time datetime="2025-12-20">2025.12.20</time>
-            <span>本ホームページ作成</span>
+
+            <time datetime="2025-12-20">
+              2025.12.20
+            </time>
+
+            <span>
+              本ホームページ作成
+            </span>
+
           </li>
+
         </ul>
 
-        <p class="muted">※他のお知らせは随時追加</p>
       </div>
+
     </section>
 
-    <section class="section" id="faq">
-      <div class="container">
-        <h2 class="section-title">FAQ</h2>
 
-        <div class="faq">
-          <h3 class="faq-q">Q. いつ完成？</h3>
-          <p class="faq-a">A. テストプレイを重ね、2026年ゲームマーケット秋で販売予定。</p>
+    <!-- お問い合わせ -->
+    <section class="section" id="contact">
+
+      <div class="container">
+
+        <h2 class="section-title">
+          お問い合わせ
+        </h2>
+
+        <div class="contact-links">
+
+          <a
+            href="https://x.com/lean_frontier?s=11"
+            target="_blank"
+            rel="noopener noreferrer">
+
+            公式X
+
+          </a>
+
+          <a
+            href="https://line.me/R/ti/p/@273joulf"
+            target="_blank"
+            rel="noopener noreferrer">
+
+            公式LINE
+
+          </a>
+
+          <a href="mailto:leanfrontier.official@gmail.com">
+            leanfrontier.official@gmail.com
+          </a>
+
         </div>
 
-        <p class="muted">※他のFAQは随時追加</p>
       </div>
+
     </section>
 
-   <section class="section" id="contact">
-  <div class="container">
-    <h2 class="section-title">お問い合わせ</h2>
-
-    <p>
-      <a href="https://x.com/lean_frontier?s=11"
-         target="_blank"
-         rel="noopener noreferrer">
-        公式X
-      </a>
-      <br>
-
-      <a href="https://line.me/R/ti/p/@273joulf"
-         target="_blank"
-         rel="noopener noreferrer">
-        公式LINE
-      </a>
-      <br>
-
-      <a href="mailto:leanfrontier.official@gmail.com">
-        leanfrontier.official@gmail.com
-      </a>
-    </p>
-  </div>
-</section>
   </main>
 
+
+  <!-- フッター -->
   <footer class="site-footer">
+
     <div class="container footer-inner">
-      <small>© Lane Frontier</small>
+
+      <small>
+        © Lane Frontier
+      </small>
+
       <div class="sns">
-  <a href="https://x.com/lean_frontier?s=11"
-     target="_blank"
-     rel="noopener noreferrer"
-     aria-label="公式X">
 
-    <img src="x-logo.jpeg"
-         alt="公式X"
-         class="sns-icon">
-  </a>
+        <a
+          href="https://x.com/lean_frontier?s=11"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="公式X">
 
-  <a href="https://line.me/R/ti/p/@273joulf"
-     target="_blank"
-     rel="noopener noreferrer"
-     aria-label="公式LINE">
+          <img
+            src="x-logo.jpeg"
+            alt="公式X"
+            class="sns-icon">
 
-    <img src="line-logo.webp"
-         alt="公式LINE"
-         class="sns-icon">
-  </a>
-</div>
+        </a>
+
+        <a
+          href="https://line.me/R/ti/p/@273joulf"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="公式LINE">
+
+          <img
+            src="line-logo.webp"
+            alt="公式LINE"
+            class="sns-icon">
+
+        </a>
+
+      </div>
+
     </div>
+
   </footer>
 
+
   <script src="main.js"></script>
+
 </body>
+
 </html>

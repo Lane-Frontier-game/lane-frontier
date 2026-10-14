@@ -1883,7 +1883,7 @@ img {
 /* RULES：グリフォンの原画 */
 
 .lf-rules-banner .lf-page-hero-art {
-  background-image: url("rules-art.jpg");
+  background-image: url("rules-art.webp");
   background-position: center;
   background-size: cover;
   opacity: 0.2;

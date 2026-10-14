@@ -1069,11 +1069,49 @@ img {
    12. CHAPTER 03：カード紹介
 ======================================== */
 
+
 .guide-type-grid {
   display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
+  grid-template-columns: repeat(6, minmax(0, 1fr));
   gap: 22px;
 }
+
+/* 領土は横幅いっぱいに表示 */
+.guide-type:nth-child(1) {
+  grid-column: span 6;
+  border-top: 4px solid #a88b64;
+}
+
+/* ほかの3種類は横並び */
+.guide-type:nth-child(n + 2) {
+  grid-column: span 2;
+}
+
+/* 領土の説明画像を大きく表示 */
+.guide-type-images {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  align-items: center;
+  gap: 24px;
+}
+
+.guide-type-images img {
+  display: block;
+  width: 100%;
+  max-height: none;
+  object-fit: contain;
+}
+
+/* モンスター・マジック・装備の画像 */
+.guide-type > img {
+  display: block;
+  width: 100%;
+  max-width: none;
+  max-height: none;
+  margin: auto;
+  object-fit: contain;
+}
+
 
 .guide-type {
   display: flex;
@@ -1955,5 +1993,95 @@ img {
 
   .brand-name {
     font-size: 15px;
+  }
+}
+
+
+/* カード紹介：画面幅に応じた配置 */
+@media (max-width: 900px) {
+  .guide-type-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .guide-type:nth-child(1) {
+    grid-column: span 2;
+  }
+
+  .guide-type:nth-child(n + 2) {
+    grid-column: span 1;
+  }
+}
+
+@media (max-width: 640px) {
+  .guide-type-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .guide-type:nth-child(1),
+  .guide-type:nth-child(n + 2) {
+    grid-column: span 1;
+  }
+
+  .guide-type-images {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+}
+
+
+/* ========================================
+   カード紹介：画像サイズの最終調整
+======================================== */
+
+/* 4種類のカードをすべて縦に並べる */
+.guide-page .guide-type-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 24px;
+}
+
+/* 前回設定した横並び指定を解除 */
+.guide-page .guide-type-grid .guide-type {
+  grid-column: auto;
+  padding: 32px;
+}
+
+/* 領土の説明画像は2枚横並び */
+.guide-page .guide-type-images {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 24px;
+}
+
+.guide-page .guide-type-images img {
+  display: block;
+  width: 100%;
+  max-height: none;
+  object-fit: contain;
+}
+
+/* モンスター・マジック・装備の画像を拡大 */
+.guide-page .guide-type > img {
+  display: block;
+  width: 100%;
+  max-width: 680px;
+  max-height: none;
+  margin: 12px auto 0;
+  object-fit: contain;
+}
+
+/* スマホでは領土の画像も縦並び */
+@media (max-width: 640px) {
+  .guide-page .guide-type-grid .guide-type {
+    padding: 22px;
+  }
+
+  .guide-page .guide-type-images {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+
+  .guide-page .guide-type > img {
+    max-width: 100%;
   }
 }

@@ -1,977 +1,748 @@
 
 <!DOCTYPE html>
 <html lang="ja">
-
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>ルール | Lane Frontier</title>
+  <title>はじめてのレーンフロンティア | 公式ルール</title>
   <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
 
-  <div class="menu-overlay"></div>
+<div class="menu-overlay"></div>
 
-  <!-- スマホメニュー -->
-  <aside class="mobile-menu">
+<aside class="mobile-menu">
+  <button class="close-menu" aria-label="メニューを閉じる">×</button>
+  <nav class="mobile-nav">
+    <button class="mobile-about" type="button">レーンフロンティアとは</button>
+    <div class="mobile-submenu">
+      <a href="about.html#about-game">どんなゲーム？</a>
+      <a href="about.html#about-world">世界観</a>
+      <a href="about.html#about-team">製作者</a>
+    </div>
+    <a href="rules.html">ルール</a>
+    <a href="index.html#news">お知らせ</a>
+    <a href="index.html#contact">お問い合わせ</a>
+  </nav>
+</aside>
 
-    <button class="close-menu" aria-label="メニューを閉じる">
-      ×
-    </button>
-
-    <nav class="mobile-nav">
-
-      <button class="mobile-about">
-        レーンフロンティアとは
-      </button>
-
-      <div class="mobile-submenu">
-        <a href="about.html#about-game">どんなゲーム？</a>
-        <a href="about.html#about-world">世界観</a>
-        <a href="about.html#about-team">製作者</a>
-      </div>
-
-      <a href="rules.html">ルール</a>
-      <a href="index.html#news">お知らせ</a>
-      <a href="index.html#contact">お問い合わせ</a>
-
+<header class="site-header">
+  <div class="container header-inner">
+    <button class="menu-toggle" aria-label="メニューを開く">☰</button>
+    <a class="brand" href="index.html">
+      <img src="hero-logo.jpg" alt="" class="lf-header-logo">
+      <span class="brand-name">Lane Frontier</span>
+    </a>
+    <nav class="global-nav">
+      <ul class="nav-list">
+        <li class="nav-item has-dropdown">
+          <button class="nav-link nav-button" type="button">
+            レーンフロンティアとは
+          </button>
+          <ul class="dropdown">
+            <li><a href="about.html#about-game">どんなゲーム？</a></li>
+            <li><a href="about.html#about-world">世界観</a></li>
+            <li><a href="about.html#about-team">製作者</a></li>
+          </ul>
+        </li>
+        <li class="nav-item"><a class="nav-link" href="rules.html">ルール</a></li>
+        <li class="nav-item"><a class="nav-link" href="index.html#news">お知らせ</a></li>
+        <li class="nav-item"><a class="nav-link" href="index.html#contact">お問い合わせ</a></li>
+      </ul>
     </nav>
+  </div>
+</header>
 
-  </aside>
+<main class="rules-page guide-page">
 
-
-  <!-- ヘッダー -->
-  <header class="site-header">
-
-    <div class="container header-inner">
-
-      <button class="menu-toggle" aria-label="メニューを開く">
-        ☰
-      </button>
-
-      <a class="brand" href="index.html">
-
-        <img
-          src="hero-logo.jpg"
-          alt=""
-          class="lf-header-logo">
-
-        <span class="brand-name">
-          Lane Frontier
-        </span>
-
+  <!-- ファーストビュー -->
+  <section class="rules-hero lf-page-hero lf-rules-banner" id="guide-top">
+    <div class="lf-page-hero-art" aria-hidden="true"></div>
+    <div class="container">
+      <p class="lf-section-kicker">OFFICIAL GAME GUIDE</p>
+      <h1 class="rules-title">
+        はじめての<br>レーンフロンティア
+      </h1>
+      <p class="rules-lead">
+        領土を広げて、仲間を呼び、相手の城へ。<br>
+        初めて遊ぶ人も、上から順に読めば
+        ゲームの流れがつかめる公式ルールガイドです。
+      </p>
+      <a class="guide-start" href="#guide-goal">
+        ルールを読む ↓
       </a>
+    </div>
+  </section>
 
+  <!-- 目次 -->
+  <nav class="guide-toc" aria-label="このページの目次">
+    <div class="container">
+      <p class="guide-toc-caption">
+        CONTENTS
+        <span>読みたいところから確認できます</span>
+      </p>
+      <div class="guide-toc-grid">
+        <a href="#guide-goal"><span>01</span>まずは勝ち方</a>
+        <a href="#guide-field"><span>02</span>戦場の見方</a>
+        <a href="#guide-cards"><span>03</span>カードを知ろう</a>
+        <a href="#guide-setup"><span>04</span>ゲームの準備</a>
+        <a href="#guide-turn"><span>05</span>1ターンの流れ</a>
+        <a href="#guide-actions"><span>06</span>カードの使い方</a>
+        <a href="#guide-move"><span>07</span>移動と戦闘</a>
+        <a href="#guide-details"><span>08</span>細かいルール</a>
+      </div>
+    </div>
+  </nav>
 
-      <nav class="global-nav">
+  <!-- 01 勝利条件 -->
+  <section class="guide-chapter" id="guide-goal">
+    <div class="container guide-narrow">
 
-        <ul class="nav-list">
+      <div class="guide-chapter-head">
+        <span class="guide-index">CHAPTER 01</span>
+        <h2>まずは、どうやったら勝ち？</h2>
+        <p>
+          目指すのは相手の城。
+          自分の領土を広げながら、
+          モンスターを相手側へ進めていきます。
+        </p>
+      </div>
 
-          <li class="nav-item has-dropdown">
+      <div class="guide-victory">
+        <article>
+          <span class="guide-card-number">WIN 01</span>
+          <h3>相手の城にたどり着く</h3>
+          <p>
+            自分のモンスターが相手の城に到達したら勝利です。
+          </p>
+        </article>
 
-            <button
-              class="nav-link nav-button"
-              type="button">
-              レーンフロンティアとは
-            </button>
+        <article>
+          <span class="guide-card-number">WIN 02</span>
+          <h3>相手の城を0枚にする</h3>
+          <p>
+            城は40枚のカードでできています。
+            相手の城のカードが0枚になれば勝利です。
+            自分の城が0枚になったら、その時点で敗北します。
+          </p>
+        </article>
+      </div>
 
-            <ul class="dropdown">
+      <p class="guide-bridge">
+        まずは「領土をつなげて、モンスターを
+        相手の城まで運ぶゲーム」と覚えればOK。
+      </p>
+    </div>
+  </section>
 
-              <li>
-                <a href="about.html#about-game">
-                  どんなゲーム？
-                </a>
-              </li>
+  <!-- 02 戦場 -->
+  <section class="guide-chapter guide-tint" id="guide-field">
+    <div class="container guide-narrow">
 
-              <li>
-                <a href="about.html#about-world">
-                  世界観
-                </a>
-              </li>
+      <div class="guide-chapter-head">
+        <span class="guide-index">CHAPTER 02</span>
+        <h2>戦場は、どんな場所？</h2>
+        <p>
+          カードを置く場所を先に知っておくと、
+          この後の説明がぐっと分かりやすくなります。
+        </p>
+      </div>
 
-              <li>
-                <a href="about.html#about-team">
-                  製作者
-                </a>
-              </li>
+      <div class="guide-visual-pair">
+        <figure class="guide-image">
+          <img
+            src="battlefield-setup.png"
+            alt="6×5マスの戦場と両プレイヤーの城の配置"
+            loading="lazy"
+          >
+          <figcaption>ゲーム開始時の戦場と城の配置</figcaption>
+        </figure>
 
-            </ul>
+        <div>
+          <h3>縦6マス × 横5マス</h3>
+          <p>
+            戦場の1つ1つの区画を
+            <strong>「マス」</strong>と呼びます。
+            マスに置くカードが
+            <strong>「領土」</strong>です。
+          </p>
 
-          </li>
+          <h3>「隣接」は上下左右だけ</h3>
+          <p>
+            斜めのマスは隣接に含みません。
+            領土を広げるときは、
+            この上下左右のつながりが重要になります。
+          </p>
 
-          <li class="nav-item">
-            <a class="nav-link" href="rules.html">
-              ルール
-            </a>
-          </li>
+          <h3>城は領土ではない</h3>
+          <p>
+            城はカード40枚からなるデッキであり、
+            各プレイヤーの拠点です。
+            自分の城は領土の枚数には数えません。
+          </p>
+        </div>
+      </div>
 
-          <li class="nav-item">
-            <a class="nav-link" href="index.html#news">
-              お知らせ
-            </a>
-          </li>
+      <div class="guide-term">
+        <strong>ここで覚える言葉</strong>
+        <p>
+          <b>マス</b>＝戦場の区画<br>
+          <b>領土</b>＝マスに置くカード<br>
+          <b>城</b>＝デッキ兼拠点
+        </p>
+      </div>
+    </div>
+  </section>
 
-          <li class="nav-item">
-            <a class="nav-link" href="index.html#contact">
-              お問い合わせ
-            </a>
-          </li>
+  <!-- 03 カード -->
+  <section class="guide-chapter" id="guide-cards">
+    <div class="container guide-narrow">
 
-        </ul>
+      <div class="guide-chapter-head">
+        <span class="guide-index">CHAPTER 03</span>
+        <h2>使うカードは4種類</h2>
+        <p>
+          それぞれの役割を理解すれば、
+          カードを使うタイミングも分かりやすくなります。
+        </p>
+      </div>
 
-      </nav>
+      <div class="guide-type-grid">
+
+        <article class="guide-type">
+          <div>
+            <span class="guide-mini">01 / TERRITORY</span>
+            <h3>領土</h3>
+            <p>
+              モンスターが進む道をつくるカード。
+              <strong>基礎領土</strong>と
+              <strong>特殊領土</strong>の2種類があります。
+            </p>
+          </div>
+          <div class="guide-type-images">
+            <img src="basicterritory.png" alt="基礎領土カードの説明図" loading="lazy">
+            <img src="specialterritory.png" alt="特殊領土カードの説明図" loading="lazy">
+          </div>
+        </article>
+
+        <article class="guide-type">
+          <div>
+            <span class="guide-mini">02 / MONSTER</span>
+            <h3>モンスター</h3>
+            <p>
+              領土に召喚して移動させるカード。
+              相手の城を目指し、
+              敵のモンスターと戦います。
+            </p>
+          </div>
+          <img src="monster.png" alt="モンスターカードの説明図" loading="lazy">
+        </article>
+
+        <article class="guide-type">
+          <div>
+            <span class="guide-mini">03 / MAGIC</span>
+            <h3>マジック</h3>
+            <p>
+              カードに書かれた効果を使うカード。
+              条件を満たせば、メインフェイズに
+              何枚でも使えます。
+            </p>
+          </div>
+          <img src="magic.png" alt="マジックカードの説明図" loading="lazy">
+        </article>
+
+        <article class="guide-type">
+          <div>
+            <span class="guide-mini">04 / EQUIPMENT</span>
+            <h3>装備</h3>
+            <p>
+              領土に置き、モンスターが身につけるカード。
+              モンスター1体につき装備は1枚までです。
+            </p>
+          </div>
+          <img src="weapon.png" alt="装備カードの説明図" loading="lazy">
+        </article>
+
+      </div>
+
+      <div class="guide-term">
+        <strong>「必要領土数」って何？</strong>
+        <p>
+          カードを使うために必要な、自分の領土の枚数です。
+          必要な枚数を持っていれば条件を満たします。
+          領土を消費するわけではありません。
+         
+        </p>
+      </div>
 
     </div>
+  </section>
 
-  </header>
+  <!-- 04 準備 -->
+  <section class="guide-chapter guide-tint" id="guide-setup">
+    <div class="container guide-narrow">
 
-
-  <main class="rules-page">
-
-    <!-- タイトル -->
-    <section class="rules-hero lf-page-hero lf-rules-banner">
-
-      <div class="lf-page-hero-art" aria-hidden="true"></div>
-
-      <div class="container">
-
-        <p class="lf-section-kicker">
-          HOW TO PLAY
-        </p>
-
-        <h1 class="rules-title">
-          ルール
-        </h1>
-
-        <p class="rules-lead">
-          領土を開拓し、モンスターを進軍させ、
-          相手の城を目指せ。
-        </p>
-
+      <div class="guide-chapter-head">
+        <span class="guide-index">CHAPTER 04</span>
+        <h2>ゲームを始める準備</h2>
+        <p>対戦前に、次の順番で準備します。</p>
       </div>
 
-    </section>
+      <ol class="guide-steps">
+        <li>
+          <h3>40枚の城を用意する</h3>
+          <p>
+            各プレイヤーが自分の城を用意し、
+            戦場の決められた位置に置きます。
+            開始時は、戦場に城以外のカードを置きません。
+          </p>
+        </li>
+        <li>
+          <h3>じゃんけんで先攻を決める</h3>
+          <p>じゃんけんに勝ったプレイヤーが先攻です。</p>
+        </li>
+        <li>
+          <h3>7枚の手札を引く</h3>
+          <p>お互いに自分の城の上から7枚引きます。</p>
+        </li>
+        <li>
+          <h3>必要なら手札を引き直す</h3>
+          <p>
+            手札から好きな枚数を選び、
+            好きな順番で城の一番下に戻し、
+            同じ枚数を城の上から引きます。
+            <strong>引き直しは1回だけ</strong>で、
+            城はシャッフルしません。
+          </p>
+        </li>
+      </ol>
 
-
-    <!-- 01 基本情報 -->
-    <section class="rules-section">
-
-      <div class="container rules-content">
-
-        <p class="rules-label">
-          01
-        </p>
-
-        <h2 class="rules-heading">
-          基本情報
-        </h2>
-
-        <h3>
-          カードの種類
-        </h3>
-
-        <ul>
-          <li>領土</li>
-          <li>モンスター</li>
-          <li>マジック</li>
-          <li>装備</li>
-        </ul>
-
-
-        <!-- カード説明図 -->
-        <div class="card-type-gallery">
-
-          <figure class="card-type-figure">
-
-            <h4>モンスター</h4>
-
-            <img
-              src="monster.webp"
-              alt="モンスターカードの見方。カード名、属性、必要領土数、種族、能力、移動範囲、攻撃力、守備力"
-              loading="lazy">
-
-          </figure>
-
-
-          <figure class="card-type-figure">
-
-            <h4>マジック</h4>
-
-            <img
-              src="magic.webp"
-              alt="マジックカードの見方。カード名、属性、必要領土数、効果"
-              loading="lazy">
-
-          </figure>
-
-
-          <figure class="card-type-figure">
-
-            <h4>装備</h4>
-
-            <img
-              src="weapon.webp"
-              alt="装備カードの見方。カード名、属性、必要領土数、効果、能力補正"
-              loading="lazy">
-
-          </figure>
-
-
-          <figure class="card-type-figure">
-
-            <h4>基礎領土</h4>
-
-            <img
-              src="basicterritory.webp"
-              alt="基礎領土カードの見方。カード名、領土の種類"
-              loading="lazy">
-
-          </figure>
-
-
-          <figure class="card-type-figure">
-
-            <h4>特殊領土</h4>
-
-            <img
-              src="specialterritory.webp"
-              alt="特殊領土カードの見方。カード名、領土の種類、効果"
-              loading="lazy">
-
-          </figure>
-
-        </div>
-
-
-        <h3>城</h3>
-
+      <div class="guide-note">
+        <strong>先攻の最初のターン</strong>
         <p>
-          プレイヤーが使用する40枚のカードの束。
-          一般的なカードゲームにおけるデッキにあたる。
+          先攻プレイヤーは最初のドローフェイズだけ
+          カードを引きません。
+          その他のフェイズは通常どおり行えます。
         </p>
-
-
-        <h3>必要領土数</h3>
-
-        <p>
-          カードに記載されている数字。
-          カードをプレイするために必要な、
-          自分の領土の枚数を表す。
-        </p>
-
-        <p>
-          必要領土数を満たしても、
-          領土が消費されたり、
-          場を離れたりすることはない。
-        </p>
-
-
-        <h3>墓地</h3>
-
-        <p>
-          使用済みのカードや、
-          場を離れたカードなどを置く場所。
-        </p>
-
-        <p>
-          各プレイヤーごとに1つずつ用意する。
-        </p>
-
-
-        <h3>隣接</h3>
-
-        <p>
-          対象となるマスの
-          上下左右4方向を指す。
-        </p>
-
-        <p>
-          斜めのマスは隣接として扱わない。
-        </p>
-
-
-        <h3>戦場</h3>
-
-        <p>
-          城、領土、モンスター、装備などを配置し、
-          ゲームを進めるための場所。
-        </p>
-
-
-        <p class="rules-note">
-          カードに書かれた効果と基本ルールが異なる場合は、
-          カードに書かれた内容を優先する。
-        </p>
-
       </div>
 
-    </section>
+    </div>
+  </section>
 
+  <!-- 05 ターン -->
+  <section class="guide-chapter" id="guide-turn">
+    <div class="container guide-narrow">
 
-    <!-- 02 城の構築 -->
-    <section class="rules-section">
-
-      <div class="container rules-content">
-
-        <p class="rules-label">
-          02
-        </p>
-
-        <h2 class="rules-heading">
-          城の構築
-        </h2>
-
+      <div class="guide-chapter-head">
+        <span class="guide-index">CHAPTER 05</span>
+        <h2>1ターンは6つのフェイズ</h2>
         <p>
-          城は40枚で構成する。
+          自分のターンになったら、
+          下の順番で進めます。
+          全部の行動を必ず行う必要はありません。
         </p>
-
-
-        <h3>同名カード</h3>
-
-        <p>
-          同じ名前のカードは、
-          原則として1つの城に3枚まで入れられる。
-        </p>
-
-
-        <h3>基礎領土</h3>
-
-        <p>
-          基礎領土は、
-          同じ名前のカードを何枚でも入れられる。
-        </p>
-
-        <p>
-          ただし、
-          1つの城に入れられる基礎領土は
-          1種類のみ。
-        </p>
-
-
-        <h3>特殊領土</h3>
-
-        <p>
-          同じ名前の特殊領土は、
-          1つの城に3枚まで入れられる。
-        </p>
-
-        <p>
-          特殊領土の種類数に制限はない。
-        </p>
-
       </div>
 
-    </section>
-
-
-    <!-- 03 ゲームの準備 -->
-    <section class="rules-section">
-
-      <div class="container rules-content">
-
-        <p class="rules-label">
-          03
-        </p>
-
-        <h2 class="rules-heading">
-          ゲームの準備
-        </h2>
-
-        <ol>
-
-          <li>
-            各プレイヤーは40枚の城を用意する。
-          </li>
-
-          <li>
-            図のように城を配置する。
-          </li>
-
-          <li>
-            お互いに城の上から7枚引いて手札にする。
-          </li>
-
-          <li>
-            必要であれば、手札から好きな枚数を選び、
-            相手に見せず好きな順番で城の一番下へ送る。
-            その後、送った枚数と同じ枚数を城の上から引く。
-          </li>
-
-          <li>
-            じゃんけんを行い、
-            勝ったプレイヤーが先攻となる。
-          </li>
-
-        </ol>
-
-        <p>
-          初期手札の引き直し（マリガン）は、
-          1回のみ行える。
-        </p>
-
-
-        <div class="setup-layout">
-
-          <div class="setup-text">
-
-            <h3>戦場</h3>
-
-            <p>
-              戦場は縦6マス × 横5マスで構成される。
-            </p>
-
-            <p>
-              ゲーム開始時、
-              戦場には城以外のカードを置かない。
-            </p>
-
-          </div>
-
-
-          <figure class="setup-figure">
-
-            <img
-              src="battlefield-setup.png"
-              alt="ゲーム開始時の戦場配置">
-
-            <figcaption>
-              ゲーム開始時の配置
-            </figcaption>
-
-          </figure>
-
-        </div>
-
-      </div>
-
-    </section>
-
-
-    <!-- 04 勝利条件 -->
-    <section class="rules-section">
-
-      <div class="container rules-content">
-
-        <p class="rules-label">
-          04
-        </p>
-
-        <h2 class="rules-heading">
-          勝利条件
-        </h2>
-
-        <p>
-          以下のいずれかを満たすことで勝利となる。
-        </p>
-
-        <ul>
-
-          <li>
-            自分のモンスターが相手の城へ到達する。
-          </li>
-
-          <li>
-            相手の城が0枚になる。
-          </li>
-
-        </ul>
-
-        <p class="rules-note">
-          城が0枚になったプレイヤーは、
-          その時点で敗北する。
-        </p>
-
-      </div>
-
-    </section>
-
-
-    <!-- 05 ターンの進め方 -->
-    <section class="rules-section">
-
-      <div class="container rules-content">
-
-        <p class="rules-label">
-          05
-        </p>
-
-        <h2 class="rules-heading">
-          ターンの進め方
-        </h2>
-
-        <p>
-          1ターンは、
-          以下の6つのフェイズによって進行する。
-        </p>
-
-
-        <!-- 6フェイズ一覧 -->
-        <div class="phase-list phase-list-six">
-
-          <div class="phase-card">
-            <span class="phase-number">1</span>
+      <ol class="guide-phases">
+        <li>
+          <span>01</span>
+          <div>
             <h3>スタートフェイズ</h3>
+            <p>自分のターンの開始です。</p>
           </div>
+        </li>
 
-          <div class="phase-card">
-            <span class="phase-number">2</span>
+        <li>
+          <span>02</span>
+          <div>
             <h3>ドローフェイズ</h3>
+            <p>
+              城の上からカードを1枚引きます。
+              先攻の最初のターンだけは引きません。
+            </p>
           </div>
+        </li>
 
-          <div class="phase-card">
-            <span class="phase-number">3</span>
+        <li>
+          <span>03</span>
+          <div>
             <h3>開拓フェイズ</h3>
+            <p>
+              手札の領土を<strong>最大1枚</strong>、
+              自分の城または自分の領土に
+              隣接する空きマスへ置けます。
+            </p>
           </div>
+        </li>
 
-          <div class="phase-card">
-            <span class="phase-number">4</span>
+        <li>
+          <span>04</span>
+          <div>
             <h3>メインフェイズ</h3>
+            <p>
+              モンスターを召喚したり、
+              装備を置いたり、マジックを使ったりします。
+              <strong>召喚と装備のプレイは合わせて1回</strong>。
+              マジックは条件を満たす限り何枚でも使えます。
+              行動順は自由です。
+            </p>
           </div>
+        </li>
 
-          <div class="phase-card">
-            <span class="phase-number">5</span>
+        <li>
+          <span>05</span>
+          <div>
             <h3>移動フェイズ</h3>
+            <p>
+              自分のモンスター
+              <strong>1体を1回</strong>、
+              通常移動させられます。
+              移動しなくても構いません。
+            </p>
           </div>
+        </li>
 
-          <div class="phase-card">
-            <span class="phase-number">6</span>
+        <li>
+          <span>06</span>
+          <div>
             <h3>エンドフェイズ</h3>
+            <p>
+              自分のターンを終了し、
+              相手のターンへ移ります。
+            </p>
           </div>
+        </li>
+      </ol>
 
-        </div>
+      <p class="guide-bridge">
+        ここまでで、ゲーム全体の流れはひととおり分かりました。
+        次は各行動を詳しく見ていきます。
+      </p>
 
+    </div>
+  </section>
 
-        <!-- スタートフェイズ -->
-        <h3>
-          1. スタートフェイズ
-        </h3>
+  <!-- 06 行動 -->
+  <section class="guide-chapter guide-tint" id="guide-actions">
+    <div class="container guide-narrow">
 
+      <div class="guide-chapter-head">
+        <span class="guide-index">CHAPTER 06</span>
+        <h2>カードを使うときのルール</h2>
         <p>
-          自分のターンの開始を示すフェイズ。
+          「どこに置ける？」「何回できる？」を
+          行動ごとに確認しましょう。
         </p>
+      </div>
 
-
-        <!-- ドローフェイズ -->
-        <h3>
-          2. ドローフェイズ
-        </h3>
-
+      <div class="guide-action">
+        <span class="guide-action-label">開拓フェイズ</span>
+        <h3>領土を広げる</h3>
         <p>
-          城の上からカードを1枚引く。
+          手札の領土カードを、自分の城または
+          自分の領土に
+          <strong>上下左右で隣接する空きマス</strong>
+          に置きます。1ターンに最大1枚です。
         </p>
+      </div>
 
+      <div class="guide-action">
+        <span class="guide-action-label">メインフェイズ</span>
+        <h3>モンスターを召喚する</h3>
+        <p>
+          必要領土数を満たしていれば、
+          <strong>自分の領土</strong>に
+          モンスターを召喚できます。
+          すでにモンスターがいるマスや
+          城には召喚できません。
+          装備だけがある領土には召喚できます。
+        </p>
+        <p>
+          召喚したターンは
+          <strong>通常移動できません</strong>。
+          ただしカード効果による移動はできます。
+          召喚先に装備がある場合は、
+          その中から1枚を選んで装備できます。
+        </p>
+      </div>
+
+      <div class="guide-action">
+        <span class="guide-action-label">メインフェイズ</span>
+        <h3>マジックを使う</h3>
+        <p>
+          必要領土数を満たしていれば使用できます。
+          使用できる対象や範囲は
+          カードに書かれた内容に従います。
+          使用後のマジックは墓地に置きます。
+        </p>
+        <p>
+          マジックは
+          <strong>1ターンに何枚でも</strong>使用でき、
+          召喚や装備の前後にも使えます。
+        </p>
+      </div>
+
+      <div class="guide-action">
+        <span class="guide-action-label">メインフェイズ</span>
+        <h3>装備を置く</h3>
+        <p>
+          装備カードは
+          <strong>自分の領土</strong>に置きます。
+          モンスターがいない領土でも構いません。
+          1つの領土に複数の装備を置けます。
+        </p>
         <p>
           ただし、
-          先攻プレイヤーの最初のターンのみ
-          カードを引かない。
+          <strong>
+            モンスターの召喚と装備のプレイは
+            合わせて1ターン1回
+          </strong>です。
         </p>
-
-
-        <!-- 開拓フェイズ -->
-        <h3>
-          3. 開拓フェイズ
-        </h3>
-
-        <p>
-          手札から領土カードを
-          最大1枚まで戦場に出すことができる。
-        </p>
-
-        <p>
-          領土は、
-          自分の城または
-          自分の領土に隣接している空いているマスへ配置する。
-        </p>
-
-        <p>
-          すでに城や領土が存在するマスには、
-          新しい領土を配置できない。
-        </p>
-
-
-        <!-- メインフェイズ -->
-        <h3>
-          4. メインフェイズ
-        </h3>
-
-        <p>
-          メインフェイズでは、
-          モンスターの召喚、
-          装備のプレイ、
-          マジックの使用を行うことができる。
-        </p>
-
-        <p class="rules-note">
-          モンスターの召喚と装備のプレイは、
-          合わせて1ターンに1回まで。
-          マジックは条件を満たしていれば、
-          1ターンに何枚でも使用できる。
-        </p>
-
-
-        <h3>
-          モンスターの召喚
-        </h3>
-
-        <p>
-          自分の領土の枚数が、
-          モンスターに書かれている必要領土数以上であれば召喚できる。
-        </p>
-
-        <ul class="rule-list">
-
-          <li>
-            対応する属性を持つ自分の領土上にのみ召喚できる。
-          </li>
-
-          <li>
-            モンスターが存在するマスや城の上には召喚できない。
-          </li>
-
-        </ul>
-
-
-        <h3>
-          装備
-        </h3>
-
-        <p>
-          装備は、
-          対応する属性を持つ自分の領土上にプレイする。
-        </p>
-
-        <ul class="rule-list">
-
-          <li>
-            モンスターがいない領土にも配置できる。
-          </li>
-
-          <li>
-            自分の領土上であれば、
-            自分・相手どちらのモンスターにも装備できる。
-          </li>
-
-          <li>
-            1体のモンスターが装備できる装備カードは1枚まで。
-          </li>
-
-          <li>
-            装備しているモンスターが場を離れた場合、
-            装備はそのマスに残る。
-          </li>
-
-          <li>
-            1つの領土上には複数の装備を置くことができる。
-          </li>
-
-        </ul>
-
-
-        <h3>
-          マジック
-        </h3>
-
-        <p>
-          必要領土数を満たし、
-          対応する属性を持つ自分の領土が1枚以上あれば使用できる。
-        </p>
-
-        <ul class="rule-list">
-
-          <li>
-            条件を満たしていれば1ターンに何枚でも使用できる。
-          </li>
-
-          <li>
-            使用したマジックは墓地へ送る。
-          </li>
-
-          <li>
-            対象や効果範囲はカードに書かれた内容に従う。
-          </li>
-
-        </ul>
-
-
-        <!-- 移動フェイズ -->
-        <h3>
-          5. 移動フェイズ
-        </h3>
-
-        <ul class="rule-list">
-
-          <li>
-            自分のモンスターを
-            このフェイズ中に一回だけ移動させることができる。
-          </li>
-
-          <li>
-            移動を行わなくてもよい。
-          </li>
-
-          <li>
-            モンスターは、
-            自分または相手の領土が存在するマスを
-            移動できる。
-          </li>
-
-          <li>
-            自分のモンスターがいるマスを通過することはできない。
-          </li>
-
-          <li>
-            召喚したターンのモンスターは通常移動できない。
-          </li>
-
-          <li>
-            装備中のモンスターが移動すると、
-            装備もそのモンスターとともに移動する。
-          </li>
-
-          <li>
-            装備が存在するマスへモンスターが移動した場合、
-            そのモンスターはそこにある装備を1枚装備する。
-          </li>
-
-          <li>
-            相手モンスターのいるマスへ到達した場合、
-            戦闘が発生する。
-          </li>
-
-        </ul>
-
-
-        <!-- エンドフェイズ -->
-        <h3>
-          6. エンドフェイズ
-        </h3>
-
-        <p>
-          自分のターンを終了し、
-          相手のターンへ移る。
-        </p>
-
-      </div>
-
-    </section>
-
-
-    <!-- 06 戦闘 -->
-    <section class="rules-section">
-
-      <div class="container rules-content">
-
-        <p class="rules-label">
-          06
-        </p>
-
-        <h2 class="rules-heading">
-          戦闘
-        </h2>
-
-        <p>
-          移動しているモンスターが
-          相手モンスターの存在するマスへ入った場合、
-          戦闘が発生する。
-        </p>
-
-        <p>
-          移動しているモンスターの
-          <strong>攻撃力</strong>と、
-          そのマスにいたモンスターの
-          <strong>守備力</strong>を比較する。
-        </p>
-
-
-        <div class="combat-result">
-
-          <p>
-            <strong>攻撃力 ＞ 守備力</strong>
-            <br>
-            守備側のモンスターを墓地へ送る。
-          </p>
-
-          <p>
-            <strong>攻撃力 ＜ 守備力</strong>
-            <br>
-            攻撃側のモンスターを墓地へ送る。
-          </p>
-
-          <p>
-            <strong>攻撃力 ＝ 守備力</strong>
-            <br>
-            両方のモンスターを墓地へ送る。
-          </p>
-
-        </div>
-
-
-        <p>
-          装備やカード効果による数値の変更がある場合は、
-          それらを反映した最終的な数値で比較する。
-        </p>
-
-        <p>
-          戦闘によってモンスターが場を離れた場合、
-          そのモンスターが装備していた装備は
-          そのマスに残る。
-        </p>
-
-      </div>
-
-    </section>
-
-
-    <!-- 07 城 -->
-    <section class="rules-section">
-
-      <div class="container rules-content">
-
-        <p class="rules-label">
-          07
-        </p>
-
-        <h2 class="rules-heading">
-          城
-        </h2>
-
-        <p>
-          城は戦場に最初から存在する、
-          各プレイヤーの拠点。
-        </p>
-
-        <p>
-          城は領土として数えない。
-        </p>
-
-        <p>
-          自分の城には、自分のモンスターを召喚できない。
-        </p>
-
-        <p>
-          自分のモンスターは自分の城へ通常移動できない。
-        </p>
-
-        <p>
-          自分のモンスターが
-          相手の城へ到達した時点で勝利となる。
-        </p>
-
-      </div>
-
-    </section>
-
-
-    <!-- 08 公開情報 -->
-    <section class="rules-section">
-
-      <div class="container rules-content">
-
-        <p class="rules-label">
-          08
-        </p>
-
-        <h2 class="rules-heading">
-          公開情報
-        </h2>
-
-        <p>
-          戦場に出ているカードと
-          墓地のカードは公開情報として扱う。
-        </p>
-
-        <p>
-          手札と城の中身は
-          非公開情報として扱う。
-        </p>
-
-      </div>
-
-    </section>
-
-
-    <!-- お問い合わせ案内 -->
-    <section class="rules-contact-section">
-
-      <div class="container">
-
-        <div class="rules-contact-card">
-
-          <div class="rules-contact-icon">
-            ?
-          </div>
-
-          <h2>
-            ルールでわからないことはありませんか？
-          </h2>
-
-          <p>
-            気になることやご質問があれば、<br>
-            お気軽にお問い合わせください！
-          </p>
-
-          <a
-            href="index.html#contact"
-            class="rules-contact-button">
-            お問い合わせはこちら →
-          </a>
-
-        </div>
-
-      </div>
-
-    </section>
-
-  </main>
-
-
-  <!-- フッター -->
-  <footer class="site-footer">
-
-    <div class="container footer-inner">
-
-      <small>
-        © Lane Frontier
-      </small>
-
-      <div class="sns">
-
-        <a
-          href="https://x.com/lean_frontier?s=11"
-          target="_blank"
-          rel="noopener noreferrer"
-          aria-label="公式X">
-
-          <img
-            src="x-logo.jpeg"
-            alt="公式X"
-            class="sns-icon">
-
-        </a>
-
-        <a
-          href="https://line.me/R/ti/p/@273joulf"
-          target="_blank"
-          rel="noopener noreferrer"
-          aria-label="公式LINE">
-
-          <img
-            src="line-logo.webp"
-            alt="公式LINE"
-            class="sns-icon">
-
-        </a>
-
       </div>
 
     </div>
+  </section>
 
-  </footer>
+  <!-- 07 移動と戦闘 -->
+  <section class="guide-chapter" id="guide-move">
+    <div class="container guide-narrow">
 
+      <div class="guide-chapter-head">
+        <span class="guide-index">CHAPTER 07</span>
+        <h2>モンスターの移動と戦闘</h2>
+        <p>相手の城を目指すための大事なルールです。</p>
+      </div>
 
-  <script src="main.js"></script>
+      <div class="guide-action">
+        <span class="guide-action-label">移動</span>
+        <h3>「通常移動」と「効果移動」</h3>
+        <p>
+          <strong>通常移動</strong>は、
+          移動フェイズに自分のモンスター1体を
+          1回動かす行動です。
+          <strong>効果移動</strong>は、
+          カードの効果で行う移動です。
+          召喚したターンでも効果移動はできます。
+        </p>
+        <p>
+          モンスターは領土があるマスを移動します。
+          領土のないマスには移動できません。
+          移動できる範囲はカードの記載に従います。
+        </p>
+      </div>
 
+      <div class="guide-action">
+        <span class="guide-action-label">戦闘</span>
+        <h3>相手のモンスターがいる領土に入ったら</h3>
+        <p>
+          通常移動でも効果移動でも、
+          相手のモンスターがいる領土に入ると
+          戦闘が起こります。
+          移動してきたモンスターが
+          <strong>攻撃側</strong>、
+          元からいたモンスターが
+          <strong>守備側</strong>です。
+        </p>
+        <p>
+          攻撃側の<strong>攻撃力（ATK）</strong>と
+          守備側の<strong>守備力（DEF）</strong>を
+          比較します。
+          装備やカード効果による
+          数値の変更も反映します。
+        </p>
+      </div>
+
+      <div class="guide-results">
+        <div>
+          <b>ATK ＞ DEF</b>
+          <strong>攻撃側の勝ち</strong>
+          <p>
+            守備側が死亡し、
+            攻撃側がその領土に残ります。
+          </p>
+        </div>
+
+        <div>
+          <b>ATK ＜ DEF</b>
+          <strong>守備側の勝ち</strong>
+          <p>
+            攻撃側が死亡し、
+            守備側がその領土に残ります。
+          </p>
+        </div>
+
+        <div>
+          <b>ATK ＝ DEF</b>
+          <strong>引き分け</strong>
+          <p>
+            両方のモンスターが死亡します。
+          </p>
+        </div>
+      </div>
+
+      <div class="guide-action">
+        <span class="guide-action-label">戦闘後</span>
+        <h3>死亡したモンスターと装備</h3>
+        <p>
+          死亡したモンスターは墓地へ置きます。
+          身につけていた装備は墓地へ行かず、
+          <strong>その領土に残ります</strong>。
+          両方のモンスターが死亡した場合も、
+          それぞれの装備は残ります。
+        </p>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- 08 共通ルール -->
+  <section class="guide-chapter guide-tint" id="guide-details">
+    <div class="container guide-narrow">
+
+      <div class="guide-chapter-head">
+        <span class="guide-index">CHAPTER 08</span>
+        <h2>知っておきたい共通ルール</h2>
+        <p>
+          実際に遊ぶとき、
+          確認したくなりやすいルールをまとめています。
+        </p>
+      </div>
+
+      <div class="guide-detail-grid">
+        <article>
+          <h3>装備は誰が使える？</h3>
+          <p>
+            装備カードの持ち主と、
+            使うモンスターの持ち主が違っていても構いません。
+            装備を選ぶのは、そのモンスターの持ち主です。
+          </p>
+        </article>
+
+        <article>
+          <h3>装備を交換できる？</h3>
+          <p>
+            モンスターが持てる装備は1枚まで。
+            すでに装備しているモンスターは、
+            別の装備と交換できません。
+          </p>
+        </article>
+
+        <article>
+          <h3>装備を持ったまま移動できる？</h3>
+          <p>
+            装備中のカードはモンスターと一緒に移動します。
+            モンスターが死亡した場合は、
+            死亡した領土に装備を残します。
+          </p>
+        </article>
+
+        <article>
+          <h3>装備カードの向きは？</h3>
+          <p>
+            装備しているモンスターの持ち主にかかわらず、
+            装備カードの持ち主が正しく読める向きに置きます。
+          </p>
+        </article>
+
+        <article>
+          <h3>何が公開情報？</h3>
+          <p>
+            戦場に出ているカードと墓地は公開情報です。
+            手札と城の中身は非公開情報です。
+          </p>
+        </article>
+
+        <article>
+          <h3>基本ルールとカード効果が違ったら？</h3>
+          <p>カードに書かれた内容を優先します。</p>
+        </article>
+      </div>
+
+      <div class="guide-deck">
+        <h3>城を組むときのルール</h3>
+        <ul>
+          <li>
+            城は<strong>ちょうど40枚</strong>で構成します。
+          </li>
+          <li>
+            同じ名前のカードは原則
+            <strong>3枚まで</strong>です。
+          </li>
+          <li>
+            <strong>基礎領土</strong>は
+            同名カードを何枚でも入れられますが、
+            1つの城には1種類のみです。
+          </li>
+          <li>
+            <strong>特殊領土</strong>は
+            同名3枚までで、
+            異なる種類を何種類でも入れられます。
+          </li>
+        </ul>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- 締め -->
+  <section class="guide-end">
+    <div class="container guide-narrow">
+      <p class="guide-index">READY TO PLAY?</p>
+      <h2>さあ、領土を広げよう。</h2>
+      <p>
+        最初はターンの流れを見ながら遊べば大丈夫。
+        迷ったときは、このページの目次から
+        該当するルールに戻れます。
+      </p>
+      <a class="guide-back" href="#guide-top">
+        ページの先頭へ ↑
+      </a>
+    </div>
+  </section>
+
+  <!-- お問い合わせ -->
+  <section class="rules-contact-section">
+    <div class="container">
+      <div class="rules-contact-card">
+        <div class="rules-contact-icon">?</div>
+        <h2>ルールでわからないことはありませんか？</h2>
+        <p>
+          気になることやご質問があれば、<br>
+          お気軽にお問い合わせください！
+        </p>
+        <a class="rules-contact-button" href="index.html#contact">
+          お問い合わせはこちら →
+        </a>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="container footer-inner">
+    <small>© Lane Frontier</small>
+    <div class="sns">
+      <a
+        href="https://x.com/lean_frontier?s=11"
+        target="_blank"
+        rel="noopener noreferrer"
+        aria-label="公式X"
+      >
+        <img src="x-logo.jpeg" alt="公式X" class="sns-icon">
+      </a>
+      <a
+        href="https://line.me/R/ti/p/@273joulf"
+        target="_blank"
+        rel="noopener noreferrer"
+        aria-label="公式LINE"
+      >
+        <img src="line-logo.webp" alt="公式LINE" class="sns-icon">
+      </a>
+    </div>
+  </div>
+</footer>
+
+<script src="main.js"></script>
 </body>
-
 </html>

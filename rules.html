@@ -1,748 +1,1342 @@
-
 <!DOCTYPE html>
+
 <html lang="ja">
+
 <head>
+
   <meta charset="UTF-8">
+
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
   <title>はじめてのレーンフロンティア | 公式ルール</title>
+
   <link rel="stylesheet" href="style.css">
+
 </head>
+
 <body>
 
 <div class="menu-overlay"></div>
 
 <aside class="mobile-menu">
+
   <button class="close-menu" aria-label="メニューを閉じる">×</button>
+
   <nav class="mobile-nav">
+
     <button class="mobile-about" type="button">レーンフロンティアとは</button>
+
     <div class="mobile-submenu">
+
       <a href="about.html#about-game">どんなゲーム？</a>
+
       <a href="about.html#about-world">世界観</a>
+
       <a href="about.html#about-team">製作者</a>
+
     </div>
+
     <a href="rules.html">ルール</a>
+
     <a href="index.html#news">お知らせ</a>
+
     <a href="index.html#contact">お問い合わせ</a>
+
   </nav>
+
 </aside>
 
 <header class="site-header">
+
   <div class="container header-inner">
+
     <button class="menu-toggle" aria-label="メニューを開く">☰</button>
+
     <a class="brand" href="index.html">
+
       <img src="hero-logo.jpg" alt="" class="lf-header-logo">
+
       <span class="brand-name">Lane Frontier</span>
+
     </a>
+
     <nav class="global-nav">
+
       <ul class="nav-list">
+
         <li class="nav-item has-dropdown">
+
           <button class="nav-link nav-button" type="button">
+
             レーンフロンティアとは
+
           </button>
+
           <ul class="dropdown">
+
             <li><a href="about.html#about-game">どんなゲーム？</a></li>
+
             <li><a href="about.html#about-world">世界観</a></li>
+
             <li><a href="about.html#about-team">製作者</a></li>
+
           </ul>
+
         </li>
+
         <li class="nav-item"><a class="nav-link" href="rules.html">ルール</a></li>
+
         <li class="nav-item"><a class="nav-link" href="index.html#news">お知らせ</a></li>
+
         <li class="nav-item"><a class="nav-link" href="index.html#contact">お問い合わせ</a></li>
+
       </ul>
+
     </nav>
+
   </div>
+
 </header>
 
 <main class="rules-page guide-page">
 
   <!-- ファーストビュー -->
+
   <section class="rules-hero lf-page-hero lf-rules-banner" id="guide-top">
+
     <div class="lf-page-hero-art" aria-hidden="true"></div>
+
     <div class="container">
+
       <p class="lf-section-kicker">OFFICIAL GAME GUIDE</p>
+
       <h1 class="rules-title">
+
         はじめての<br>レーンフロンティア
+
       </h1>
+
       <p class="rules-lead">
+
         領土を広げて、仲間を呼び、相手の城へ。<br>
+
         初めて遊ぶ人も、上から順に読めば
+
         ゲームの流れがつかめる公式ルールガイドです。
+
       </p>
+
       <a class="guide-start" href="#guide-goal">
+
         ルールを読む ↓
+
       </a>
+
     </div>
+
   </section>
 
   <!-- 目次 -->
+
   <nav class="guide-toc" aria-label="このページの目次">
+
     <div class="container">
+
       <p class="guide-toc-caption">
+
         CONTENTS
+
         <span>読みたいところから確認できます</span>
+
       </p>
+
       <div class="guide-toc-grid">
+
         <a href="#guide-goal"><span>01</span>まずは勝ち方</a>
+
         <a href="#guide-field"><span>02</span>戦場の見方</a>
+
         <a href="#guide-cards"><span>03</span>カードを知ろう</a>
+
         <a href="#guide-setup"><span>04</span>ゲームの準備</a>
+
         <a href="#guide-turn"><span>05</span>1ターンの流れ</a>
+
         <a href="#guide-actions"><span>06</span>カードの使い方</a>
+
         <a href="#guide-move"><span>07</span>移動と戦闘</a>
-        <a href="#guide-details"><span>08</span>細かいルール</a>
+
+        <a href="#guide-equipment"><span>08</span>装備のルール</a>
+          <a href="#guide-details"><span>09</span>細かいルール</a>
+
       </div>
+
     </div>
+
   </nav>
 
   <!-- 01 勝利条件 -->
+
   <section class="guide-chapter" id="guide-goal">
+
     <div class="container guide-narrow">
 
       <div class="guide-chapter-head">
+
         <span class="guide-index">CHAPTER 01</span>
+
         <h2>まずは、どうやったら勝ち？</h2>
+
         <p>
+
           目指すのは相手の城。
+
           自分の領土を広げながら、
+
           モンスターを相手側へ進めていきます。
+
         </p>
+
       </div>
 
       <div class="guide-victory">
+
         <article>
+
           <span class="guide-card-number">WIN 01</span>
+
           <h3>相手の城にたどり着く</h3>
+
           <p>
+
             自分のモンスターが相手の城に到達したら勝利です。
+
           </p>
+
         </article>
 
         <article>
+
           <span class="guide-card-number">WIN 02</span>
+
           <h3>相手の城を0枚にする</h3>
+
           <p>
+
             城は40枚のカードでできています。
+
             相手の城のカードが0枚になれば勝利です。
+
             自分の城が0枚になったら、その時点で敗北します。
+
           </p>
+
         </article>
+
       </div>
 
       <p class="guide-bridge">
+
         まずは「領土をつなげて、モンスターを
+
         相手の城まで運ぶゲーム」と覚えればOK。
+
       </p>
+
     </div>
+
   </section>
 
   <!-- 02 戦場 -->
+
   <section class="guide-chapter guide-tint" id="guide-field">
+
     <div class="container guide-narrow">
 
       <div class="guide-chapter-head">
+
         <span class="guide-index">CHAPTER 02</span>
+
         <h2>戦場は、どんな場所？</h2>
+
         <p>
+
           カードを置く場所を先に知っておくと、
+
           この後の説明がぐっと分かりやすくなります。
+
         </p>
+
       </div>
 
       <div class="guide-visual-pair">
+
         <figure class="guide-image">
+
           <img
+
             src="battlefield-setup.png"
+
             alt="6×5マスの戦場と両プレイヤーの城の配置"
+
             loading="lazy"
+
           >
+
           <figcaption>ゲーム開始時の戦場と城の配置</figcaption>
+
         </figure>
 
         <div>
+
           <h3>縦6マス × 横5マス</h3>
+
           <p>
+
             戦場の1つ1つの区画を
+
             <strong>「マス」</strong>と呼びます。
+
             マスに置くカードが
+
             <strong>「領土」</strong>です。
+
           </p>
 
           <h3>「隣接」は上下左右だけ</h3>
+
           <p>
+
             斜めのマスは隣接に含みません。
+
             領土を広げるときは、
+
             この上下左右のつながりが重要になります。
+
           </p>
 
           <h3>城は領土ではない</h3>
+
           <p>
+
             城はカード40枚からなるデッキであり、
+
             各プレイヤーの拠点です。
+
             自分の城は領土の枚数には数えません。
+
           </p>
+
         </div>
+
       </div>
 
       <div class="guide-term">
+
         <strong>ここで覚える言葉</strong>
+
         <p>
+
           <b>マス</b>＝戦場の区画<br>
+
           <b>領土</b>＝マスに置くカード<br>
+
           <b>城</b>＝デッキ兼拠点
+
         </p>
+
       </div>
+
     </div>
+
   </section>
 
   <!-- 03 カード -->
+
   <section class="guide-chapter" id="guide-cards">
+
     <div class="container guide-narrow">
 
       <div class="guide-chapter-head">
+
         <span class="guide-index">CHAPTER 03</span>
+
         <h2>使うカードは4種類</h2>
+
         <p>
+
           それぞれの役割を理解すれば、
+
           カードを使うタイミングも分かりやすくなります。
+
         </p>
+
       </div>
 
       <div class="guide-type-grid">
 
         <article class="guide-type">
+
           <div>
+
             <span class="guide-mini">01 / TERRITORY</span>
+
             <h3>領土</h3>
+
             <p>
+
               モンスターが進む道をつくるカード。
+
               <strong>基礎領土</strong>と
+
               <strong>特殊領土</strong>の2種類があります。
+
             </p>
+
           </div>
+
           <div class="guide-type-images">
+
             <img src="basicterritory.png" alt="基礎領土カードの説明図" loading="lazy">
+
             <img src="specialterritory.png" alt="特殊領土カードの説明図" loading="lazy">
+
           </div>
+
         </article>
 
         <article class="guide-type">
+
           <div>
+
             <span class="guide-mini">02 / MONSTER</span>
+
             <h3>モンスター</h3>
+
             <p>
+
               領土に召喚して移動させるカード。
+
               相手の城を目指し、
+
               敵のモンスターと戦います。
+
             </p>
+
           </div>
+
           <img src="monster.png" alt="モンスターカードの説明図" loading="lazy">
+
         </article>
 
         <article class="guide-type">
+
           <div>
+
             <span class="guide-mini">03 / MAGIC</span>
+
             <h3>マジック</h3>
+
             <p>
+
               カードに書かれた効果を使うカード。
+
               条件を満たせば、メインフェイズに
+
               何枚でも使えます。
+
             </p>
+
           </div>
+
           <img src="magic.png" alt="マジックカードの説明図" loading="lazy">
+
         </article>
 
         <article class="guide-type">
+
           <div>
-            <span class="guide-mini">04 / EQUIPMENT</span>
+
+            <span class="guide-mini">04 / OBJECT</span>
+
             <h3>装備</h3>
+
             <p>
+
               領土に置き、モンスターが身につけるカード。
+
               モンスター1体につき装備は1枚までです。
+
             </p>
+
           </div>
+
           <img src="weapon.png" alt="装備カードの説明図" loading="lazy">
+
         </article>
 
       </div>
 
       <div class="guide-term">
+
         <strong>「必要領土数」って何？</strong>
+
         <p>
+
           カードを使うために必要な、自分の領土の枚数です。
+
           必要な枚数を持っていれば条件を満たします。
+
           領土を消費するわけではありません。
-         
+
         </p>
+
       </div>
 
     </div>
+
   </section>
 
   <!-- 04 準備 -->
+
   <section class="guide-chapter guide-tint" id="guide-setup">
+
     <div class="container guide-narrow">
 
       <div class="guide-chapter-head">
+
         <span class="guide-index">CHAPTER 04</span>
+
         <h2>ゲームを始める準備</h2>
+
         <p>対戦前に、次の順番で準備します。</p>
+
       </div>
 
       <ol class="guide-steps">
+
         <li>
+
           <h3>40枚の城を用意する</h3>
+
           <p>
+
             各プレイヤーが自分の城を用意し、
+
             戦場の決められた位置に置きます。
+
             開始時は、戦場に城以外のカードを置きません。
+
           </p>
+
         </li>
+
         <li>
+
           <h3>じゃんけんで先攻を決める</h3>
+
           <p>じゃんけんに勝ったプレイヤーが先攻です。</p>
+
         </li>
+
         <li>
+
           <h3>7枚の手札を引く</h3>
+
           <p>お互いに自分の城の上から7枚引きます。</p>
+
         </li>
+
         <li>
+
           <h3>必要なら手札を引き直す</h3>
+
           <p>
+
             手札から好きな枚数を選び、
+
             好きな順番で城の一番下に戻し、
+
             同じ枚数を城の上から引きます。
+
             <strong>引き直しは1回だけ</strong>で、
+
             城はシャッフルしません。
+
           </p>
+
         </li>
+
       </ol>
 
       <div class="guide-note">
+
         <strong>先攻の最初のターン</strong>
+
         <p>
+
           先攻プレイヤーは最初のドローフェイズだけ
+
           カードを引きません。
+
           その他のフェイズは通常どおり行えます。
+
         </p>
+
       </div>
 
     </div>
+
   </section>
 
   <!-- 05 ターン -->
+
   <section class="guide-chapter" id="guide-turn">
+
     <div class="container guide-narrow">
 
       <div class="guide-chapter-head">
+
         <span class="guide-index">CHAPTER 05</span>
+
         <h2>1ターンは6つのフェイズ</h2>
+
         <p>
+
           自分のターンになったら、
+
           下の順番で進めます。
+
           全部の行動を必ず行う必要はありません。
+
         </p>
+
       </div>
 
       <ol class="guide-phases">
+
         <li>
+
           <span>01</span>
+
           <div>
+
             <h3>スタートフェイズ</h3>
+
             <p>自分のターンの開始です。</p>
+
           </div>
+
         </li>
 
         <li>
+
           <span>02</span>
+
           <div>
+
             <h3>ドローフェイズ</h3>
+
             <p>
+
               城の上からカードを1枚引きます。
+
               先攻の最初のターンだけは引きません。
+
             </p>
+
           </div>
+
         </li>
 
         <li>
+
           <span>03</span>
+
           <div>
+
             <h3>開拓フェイズ</h3>
+
             <p>
+
               手札の領土を<strong>最大1枚</strong>、
+
               自分の城または自分の領土に
+
               隣接する空きマスへ置けます。
+
             </p>
+
           </div>
+
         </li>
 
         <li>
+
           <span>04</span>
+
           <div>
+
             <h3>メインフェイズ</h3>
+
             <p>
+
               モンスターを召喚したり、
+
               装備を置いたり、マジックを使ったりします。
+
               <strong>召喚と装備のプレイは合わせて1回</strong>。
+
               マジックは条件を満たす限り何枚でも使えます。
+
               行動順は自由です。
+
             </p>
+
           </div>
+
         </li>
 
         <li>
+
           <span>05</span>
+
           <div>
+
             <h3>移動フェイズ</h3>
+
             <p>
+
               自分のモンスター
+
               <strong>1体を1回</strong>、
+
               通常移動させられます。
+
               移動しなくても構いません。
+
             </p>
+
           </div>
+
         </li>
 
         <li>
+
           <span>06</span>
+
           <div>
+
             <h3>エンドフェイズ</h3>
+
             <p>
+
               自分のターンを終了し、
+
               相手のターンへ移ります。
+
             </p>
+
           </div>
+
         </li>
+
       </ol>
 
       <p class="guide-bridge">
+
         ここまでで、ゲーム全体の流れはひととおり分かりました。
+
         次は各行動を詳しく見ていきます。
+
       </p>
 
     </div>
+
   </section>
 
   <!-- 06 行動 -->
+
   <section class="guide-chapter guide-tint" id="guide-actions">
+
     <div class="container guide-narrow">
 
       <div class="guide-chapter-head">
+
         <span class="guide-index">CHAPTER 06</span>
+
         <h2>カードを使うときのルール</h2>
+
         <p>
+
           「どこに置ける？」「何回できる？」を
+
           行動ごとに確認しましょう。
+
         </p>
+
       </div>
 
       <div class="guide-action">
+
         <span class="guide-action-label">開拓フェイズ</span>
+
         <h3>領土を広げる</h3>
+
         <p>
+
           手札の領土カードを、自分の城または
+
           自分の領土に
+
           <strong>上下左右で隣接する空きマス</strong>
+
           に置きます。1ターンに最大1枚です。
+
         </p>
+
       </div>
 
       <div class="guide-action">
+
         <span class="guide-action-label">メインフェイズ</span>
+
         <h3>モンスターを召喚する</h3>
+
         <p>
+
           必要領土数を満たしていれば、
+
           <strong>自分の領土</strong>に
+
           モンスターを召喚できます。
+
           すでにモンスターがいるマスや
+
           城には召喚できません。
+
           装備だけがある領土には召喚できます。
+
         </p>
+
         <p>
+
           召喚したターンは
+
           <strong>通常移動できません</strong>。
+
           ただしカード効果による移動はできます。
+
           召喚先に装備がある場合は、
-          その中から1枚を選んで装備できます。
+
+          その中から必ず1枚を選んで装備します。
+
         </p>
+
       </div>
 
       <div class="guide-action">
+
         <span class="guide-action-label">メインフェイズ</span>
+
         <h3>マジックを使う</h3>
+
         <p>
+
           必要領土数を満たしていれば使用できます。
+
           使用できる対象や範囲は
+
           カードに書かれた内容に従います。
+
           使用後のマジックは墓地に置きます。
+
         </p>
+
         <p>
+
           マジックは
+
           <strong>1ターンに何枚でも</strong>使用でき、
+
           召喚や装備の前後にも使えます。
+
         </p>
+
       </div>
 
       <div class="guide-action">
+
         <span class="guide-action-label">メインフェイズ</span>
+
         <h3>装備を置く</h3>
+
         <p>
+
           装備カードは
+
           <strong>自分の領土</strong>に置きます。
+
           モンスターがいない領土でも構いません。
+
           1つの領土に複数の装備を置けます。
+
         </p>
+
         <p>
+
           ただし、
+
           <strong>
+
             モンスターの召喚と装備のプレイは
+
             合わせて1ターン1回
+
           </strong>です。
+
         </p>
+
       </div>
 
     </div>
+
   </section>
 
   <!-- 07 移動と戦闘 -->
+
   <section class="guide-chapter" id="guide-move">
+
     <div class="container guide-narrow">
 
       <div class="guide-chapter-head">
+
         <span class="guide-index">CHAPTER 07</span>
+
         <h2>モンスターの移動と戦闘</h2>
+
         <p>相手の城を目指すための大事なルールです。</p>
+
       </div>
 
       <div class="guide-action">
+
         <span class="guide-action-label">移動</span>
+
         <h3>「通常移動」と「効果移動」</h3>
+
         <p>
+
           <strong>通常移動</strong>は、
+
           移動フェイズに自分のモンスター1体を
+
           1回動かす行動です。
+
           <strong>効果移動</strong>は、
+
           カードの効果で行う移動です。
+
           召喚したターンでも効果移動はできます。
+
         </p>
+
         <p>
+
           モンスターは領土があるマスを移動します。
+
           領土のないマスには移動できません。
+
           移動できる範囲はカードの記載に従います。
+
         </p>
+
       </div>
 
       <div class="guide-action">
+
         <span class="guide-action-label">戦闘</span>
+
         <h3>相手のモンスターがいる領土に入ったら</h3>
+
         <p>
+
           通常移動でも効果移動でも、
+
           相手のモンスターがいる領土に入ると
+
           戦闘が起こります。
+
           移動してきたモンスターが
+
           <strong>攻撃側</strong>、
+
           元からいたモンスターが
+
           <strong>守備側</strong>です。
+
         </p>
+
         <p>
+
           攻撃側の<strong>攻撃力（ATK）</strong>と
+
           守備側の<strong>守備力（DEF）</strong>を
+
           比較します。
+
           装備やカード効果による
+
           数値の変更も反映します。
+
         </p>
+
       </div>
 
       <div class="guide-results">
+
         <div>
+
           <b>ATK ＞ DEF</b>
+
           <strong>攻撃側の勝ち</strong>
+
           <p>
+
             守備側が死亡し、
+
             攻撃側がその領土に残ります。
+
           </p>
+
         </div>
 
         <div>
+
           <b>ATK ＜ DEF</b>
+
           <strong>守備側の勝ち</strong>
+
           <p>
+
             攻撃側が死亡し、
+
             守備側がその領土に残ります。
+
           </p>
+
         </div>
 
         <div>
+
           <b>ATK ＝ DEF</b>
+
           <strong>引き分け</strong>
+
           <p>
+
             両方のモンスターが死亡します。
+
           </p>
+
         </div>
+
       </div>
 
       <div class="guide-action">
+
         <span class="guide-action-label">戦闘後</span>
+
         <h3>死亡したモンスターと装備</h3>
+
         <p>
+
           死亡したモンスターは墓地へ置きます。
+
           身につけていた装備は墓地へ行かず、
+
           <strong>その領土に残ります</strong>。
+
           両方のモンスターが死亡した場合も、
+
           それぞれの装備は残ります。
+
         </p>
+
       </div>
 
     </div>
+
   </section>
 
-  <!-- 08 共通ルール -->
+  <!-- 08 装備のルール -->
+<section class="guide-chapter guide-equipment" id="guide-equipment">
+  <div class="container guide-narrow">
+    <div class="guide-chapter-head">
+      <span class="guide-index">CHAPTER 08</span>
+      <h2>装備のルール</h2>
+      <p>戦士が倒れても、その武具は戦場に残る。装備はモンスターと一緒に移動しますが、モンスターが死亡しても墓地へは送られません。残された装備は相手に利用されることもあります。</p>
+    </div>
+
+    <div class="equip-feature"><span class="equip-feature-label">LANE FRONTIER / EQUIPMENT</span><h3>相手の装備も、自分の力に。</h3><p>装備は置いたプレイヤーだけのものではありません。<strong>相手がプレイした装備でも、自分のモンスターが使用できます。</strong> 戦闘で倒れたモンスターが残した装備を、敵が引き継ぐことも。装備をどこに置くか、誰に使わせるかが駆け引きになります。</p><a href="#equip-inherit">装備を引き継ぐ例を見る ↓</a></div>
+
+    <div class="equip-principle"><strong>まず覚える基本原則</strong><p>装備していないモンスターは、装備があれば必ず1枚選びます。すでに装備しているモンスターは、別の装備があっても元の装備を使い続けます。</p></div>
+
+    <article class="equip-section">
+      <span class="equip-step">RULE 01 / PLAY</span><h3>装備をプレイする</h3>
+      <p>装備は<strong>自分の領土</strong>にプレイします。モンスターがいない領土にも置くことができ、すでに装備がある領土にも追加できます。</p>
+      <div class="equip-three">
+        <div class="equip-example"><div class="equip-tile"><span class="equip-empty">空の領土</span></div><b>モンスターなし</b><small>プレイできる</small></div>
+        <div class="equip-example"><div class="equip-tile"><span class="equip-monster">モンスター</span></div><b>モンスターあり</b><small>プレイできる</small></div>
+        <div class="equip-example"><div class="equip-tile"><span class="equip-card">装備A</span></div><b>すでに装備あり</b><small>追加できる</small></div>
+      </div>
+      <p class="equip-caption">※ モンスターの召喚と装備のプレイは合わせて1ターンに1回です。</p>
+    </article>
+
+    <article class="equip-section">
+      <span class="equip-step">RULE 02 / CHOOSE</span><h3>装備していないモンスターは1枚選ぶ</h3>
+      <p>装備していないモンスターが装備のある領土に移動したときや、装備のある領土に召喚されたときは、<strong>必ず装備を1枚選びます</strong>。複数ある場合は、そのモンスターの持ち主が自由に選びます。</p>
+      <div class="equip-diagram"><div class="equip-board-title">例：装備A・B・Cがある領土</div><div class="equip-choice"><span class="equip-card">装備A</span><span class="equip-card equip-selected">装備B <em>選択</em></span><span class="equip-card">装備C</span></div><div class="equip-arrow">↓ モンスターの持ち主が選ぶ</div><div class="equip-result"><span class="equip-monster">モンスター</span><span class="equip-card">装備B</span></div><p>装備Bを使用。装備AとCはその領土に残ります。</p></div>
+    </article>
+
+    <article class="equip-section">
+      <span class="equip-step">RULE 03 / KEEP</span><h3>すでに装備しているなら交換しない</h3>
+      <p>装備Aを使用しているモンスターの領土に装備Bをプレイしても、装備Aを使い続けます。<strong>装備を選び直したり、交換したりはできません。</strong> 装備Bはその領土に置かれます。</p>
+      <div class="equip-diagram"><div class="equip-board-title">例：装備Aを使用中に装備Bをプレイ</div><div class="equip-result"><span class="equip-monster">モンスター</span><span class="equip-card">装備A</span><span class="equip-card equip-unused">装備B（未使用）</span></div><p>モンスターが使用するのは引き続き装備Aだけです。</p></div>
+    </article>
+
+    <article class="equip-section">
+      <span class="equip-step">RULE 04 / MOVE</span><h3>装備はモンスターと一緒に移動する</h3>
+      <p>装備中のモンスターが移動すると、使用中の装備も一緒に移動します。移動先に別の装備があっても、元の装備を使い続けます。</p>
+      <div class="equip-diagram"><div class="equip-compare"><div><b>移動前</b><div class="equip-tiles"><div class="equip-tile"><span class="equip-monster">モンスター</span><span class="equip-card">装備A</span></div><div class="equip-tile"><span class="equip-card equip-unused">装備B</span></div></div></div><div><b>移動後</b><div class="equip-tiles"><div class="equip-tile"><span class="equip-empty">空の領土</span></div><div class="equip-tile"><span class="equip-monster">モンスター</span><span class="equip-card">装備A</span><span class="equip-card equip-unused">装備B</span></div></div></div></div><p>装備Aはモンスターと移動。装備Bは移動先に残ったまま、使用されません。</p></div>
+    </article>
+
+    <article class="equip-section">
+      <span class="equip-step">RULE 05 / DEATH</span><h3>モンスターが死亡しても装備は残る</h3>
+      <p>装備中のモンスターが死亡すると、<strong>モンスターだけが墓地へ送られます</strong>。装備は死亡した領土に残ります。両方のモンスターが死亡した場合も、それぞれの装備は戦場に残ります。</p>
+      <div class="equip-diagram"><div class="equip-flow"><div class="equip-flow-card"><b>死亡前</b><span class="equip-monster">モンスター</span><span class="equip-card">装備A</span></div><div class="equip-arrow">→</div><div class="equip-flow-card"><b>死亡後</b><span class="equip-grave">モンスター → 墓地</span><span class="equip-card">装備A → 領土に残る</span></div></div></div>
+    </article>
+
+    <article class="equip-section equip-highlight" id="equip-inherit">
+      <span class="equip-step">RULE 06 / INHERIT</span><h3>相手の装備を奪って使える！</h3>
+      <p>装備中の攻撃側モンスターが戦闘で死亡したとき、その装備は守備側の領土に残ります。<strong>守備側が未装備なら、残された装備を使用します。</strong> 装備の持ち主と、それを使用するモンスターの持ち主は違っていても構いません。</p>
+      <ol class="equip-story"><li><b>戦闘が発生</b><div class="equip-story-board"><span class="equip-monster">攻撃側</span><span class="equip-card">装備A</span><span class="equip-versus">VS</span><span class="equip-monster equip-defender">守備側（未装備）</span></div></li><li><b>攻撃側が死亡</b><div class="equip-story-board"><span class="equip-grave">攻撃側 → 墓地</span><span class="equip-card">装備Aは守備側の領土に残る</span></div></li><li><b>守備側が装備を引き継ぐ</b><div class="equip-story-board"><span class="equip-monster equip-defender">守備側</span><span class="equip-card">装備A</span></div></li></ol>
+      <div class="equip-caution"><strong>守備側がすでに装備していたら？</strong><p>元の装備を使い続けます。攻撃側が落とした装備は、その領土に残ります。</p></div>
+    </article>
+
+    <article class="equip-section"><span class="equip-step">RULE 07 / REMEMBER</span><h3>迷ったときの確認表</h3><div class="equip-faq"><div><b>装備は1つの領土に1枚だけ？</b><p>いいえ。複数枚置けます。</p></div><div><b>モンスターは装備を2枚使える？</b><p>いいえ。使用できるのは1枚だけです。</p></div><div><b>移動先で装備を交換する？</b><p>いいえ。元の装備を使い続けます。</p></div><div><b>装備の持ち主と使用者は同じ？</b><p>同じとは限りません。相手の装備も使えます。</p></div><div><b>装備カードの向きは？</b><p>装備カードの持ち主が正しく読める向きに置きます。</p></div><div><b>死亡したら装備も墓地へ？</b><p>いいえ。死亡した領土に残ります。</p></div></div></article>
+    <p class="guide-bridge">覚えておくのは「未装備なら選ぶ、装備済みなら維持する、死亡しても装備は残る」の3つです。</p>
+  </div>
+</section>
+
+<!-- 09 共通ルール -->
+
   <section class="guide-chapter guide-tint" id="guide-details">
+
     <div class="container guide-narrow">
 
       <div class="guide-chapter-head">
-        <span class="guide-index">CHAPTER 08</span>
+
+        <span class="guide-index">CHAPTER 09</span>
+
         <h2>知っておきたい共通ルール</h2>
+
         <p>
+
           実際に遊ぶとき、
+
           確認したくなりやすいルールをまとめています。
+
         </p>
+
       </div>
 
       <div class="guide-detail-grid">
-        <article>
-          <h3>装備は誰が使える？</h3>
-          <p>
-            装備カードの持ち主と、
-            使うモンスターの持ち主が違っていても構いません。
-            装備を選ぶのは、そのモンスターの持ち主です。
-          </p>
-        </article>
 
         <article>
-          <h3>装備を交換できる？</h3>
-          <p>
-            モンスターが持てる装備は1枚まで。
-            すでに装備しているモンスターは、
-            別の装備と交換できません。
-          </p>
-        </article>
 
-        <article>
-          <h3>装備を持ったまま移動できる？</h3>
-          <p>
-            装備中のカードはモンスターと一緒に移動します。
-            モンスターが死亡した場合は、
-            死亡した領土に装備を残します。
-          </p>
-        </article>
-
-        <article>
-          <h3>装備カードの向きは？</h3>
-          <p>
-            装備しているモンスターの持ち主にかかわらず、
-            装備カードの持ち主が正しく読める向きに置きます。
-          </p>
-        </article>
-
-        <article>
           <h3>何が公開情報？</h3>
+
           <p>
+
             戦場に出ているカードと墓地は公開情報です。
+
             手札と城の中身は非公開情報です。
+
           </p>
+
         </article>
 
         <article>
+
           <h3>基本ルールとカード効果が違ったら？</h3>
+
           <p>カードに書かれた内容を優先します。</p>
+
         </article>
+
       </div>
 
       <div class="guide-deck">
+
         <h3>城を組むときのルール</h3>
+
         <ul>
+
           <li>
+
             城は<strong>ちょうど40枚</strong>で構成します。
+
           </li>
+
           <li>
+
             同じ名前のカードは原則
+
             <strong>3枚まで</strong>です。
+
           </li>
+
           <li>
+
             <strong>基礎領土</strong>は
+
             同名カードを何枚でも入れられますが、
+
             1つの城には1種類のみです。
+
           </li>
+
           <li>
+
             <strong>特殊領土</strong>は
+
             同名3枚までで、
+
             異なる種類を何種類でも入れられます。
+
           </li>
+
         </ul>
+
       </div>
 
     </div>
+
   </section>
 
   <!-- 締め -->
+
   <section class="guide-end">
+
     <div class="container guide-narrow">
+
       <p class="guide-index">READY TO PLAY?</p>
+
       <h2>さあ、領土を広げよう。</h2>
+
       <p>
+
         最初はターンの流れを見ながら遊べば大丈夫。
+
         迷ったときは、このページの目次から
+
         該当するルールに戻れます。
+
       </p>
+
       <a class="guide-back" href="#guide-top">
+
         ページの先頭へ ↑
+
       </a>
+
     </div>
+
   </section>
 
   <!-- お問い合わせ -->
+
   <section class="rules-contact-section">
+
     <div class="container">
+
       <div class="rules-contact-card">
+
         <div class="rules-contact-icon">?</div>
+
         <h2>ルールでわからないことはありませんか？</h2>
+
         <p>
+
           気になることやご質問があれば、<br>
+
           お気軽にお問い合わせください！
+
         </p>
+
         <a class="rules-contact-button" href="index.html#contact">
+
           お問い合わせはこちら →
+
         </a>
+
       </div>
+
     </div>
+
   </section>
 
 </main>
 
 <footer class="site-footer">
+
   <div class="container footer-inner">
+
     <small>© Lane Frontier</small>
+
     <div class="sns">
+
       <a
+
         href="https://x.com/lean_frontier?s=11"
+
         target="_blank"
+
         rel="noopener noreferrer"
+
         aria-label="公式X"
+
       >
+
         <img src="x-logo.jpeg" alt="公式X" class="sns-icon">
+
       </a>
+
       <a
+
         href="https://line.me/R/ti/p/@273joulf"
+
         target="_blank"
+
         rel="noopener noreferrer"
+
         aria-label="公式LINE"
+
       >
+
         <img src="line-logo.webp" alt="公式LINE" class="sns-icon">
+
       </a>
+
     </div>
+
   </div>
+
 </footer>
 
 <script src="main.js"></script>
+
 </body>
+
 </html>

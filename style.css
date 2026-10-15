@@ -3500,3 +3500,14 @@ img {
 .guide-equipment .equip-feature strong { color: #fff4d8; }
 .guide-equipment .equip-feature a { display: inline-block; margin-top: 20px; padding-bottom: 3px; border-bottom: 1px solid #e8c7a2; color: #f6d9b7; font-size: 14px; font-weight: 700; }
 .guide-equipment #equip-inherit { scroll-margin-top: 90px; }
+
+/* CHAPTER 06：詳しい移動ルールへの案内 */
+.guide-page .guide-inline-link {
+  color: #765434;
+  font-weight: 700;
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+.guide-page .guide-inline-link:hover {
+  color: #a07a53;
+}

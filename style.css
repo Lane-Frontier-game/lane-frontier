@@ -3511,3 +3511,10 @@ img {
 .guide-page .guide-inline-link:hover {
   color: #a07a53;
 }
+
+/* 装備ルール：モンスター名の改行を防ぐ */
+.guide-page .eq-monster,
+.guide-page .equipment-monster {
+  white-space: nowrap;
+  word-break: keep-all;
+}

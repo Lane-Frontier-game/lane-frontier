@@ -977,6 +977,27 @@
 
       </div>
 
+      <!-- 前進・後退：カードの移動方向 -->
+      <div class="guide-action" id="guide-directions">
+        <span class="guide-action-label">移動の方向</span>
+        <h3>「前進」と「後退」</h3>
+        <p>モンスターから見て、<strong>相手の城に向かう方向への移動を「前進」</strong>、<strong>自分の城に向かう方向への移動を「後退」</strong>と呼びます。どちらも、各プレイヤーの城の位置を基準に判断します。</p>
+        <p>カードの効果による「前進」「後退」は、<strong>モンスター自身の通常の移動範囲に関係なく</strong>、その効果に指定された方向・マス数に従って行います。</p>
+        <div class="guide-direction-grid">
+          <figure class="guide-direction-card">
+            <h4>前進 <span>FORWARD</span></h4>
+            <img src="move-forward.png" alt="前進の例。薄く表示した移動前の位置から、相手の城側の移動後の位置へ進む" loading="lazy">
+            <figcaption>相手の城に向かって進む</figcaption>
+          </figure>
+          <figure class="guide-direction-card">
+            <h4>後退 <span>BACKWARD</span></h4>
+            <img src="move-backward.png" alt="後退の例。薄く表示した移動前の位置から、自分の城側の移動後の位置へ戻る" loading="lazy">
+            <figcaption>自分の城に向かって戻る</figcaption>
+          </figure>
+        </div>
+        <p class="guide-direction-note">※ 図の薄いカードが移動前、濃いカードが移動後です。</p>
+      </div>
+
       <div class="guide-action">
 
         <span class="guide-action-label">戦闘</span>
@@ -1107,19 +1128,20 @@
     <div class="equip-principle"><strong>まず覚える基本原則</strong><p>装備していないモンスターは、装備があれば必ず1枚選びます。すでに装備しているモンスターは、別の装備があっても元の装備を使い続けます。</p></div>
 
     <article class="equip-section">
-      <span class="equip-step">RULE 01 / PLAY</span><h3>装備をプレイする</h3>
-      <p>装備は<strong>自分の領土</strong>にプレイします。モンスターがいない領土にも置くことができ、すでに装備がある領土にも追加できます。</p>
+      <span class="equip-step">RULE 01 / PLACE</span><h3>装備を配置する</h3>
+      <p>装備は<strong>自分の領土</strong>に配置します。モンスターがいない領土にも置くことができ、すでに装備がある領土にも追加できます。</p>
+      <p><strong>装備していないモンスターがその領土にいる場合は、配置した装備をその場で使用します。</strong>そのモンスターが自分のものでも、相手のものでも同じです。</p>
       <div class="equip-three">
-        <div class="equip-example"><div class="equip-tile"><span class="equip-empty">空の領土</span></div><b>モンスターなし</b><small>プレイできる</small></div>
-        <div class="equip-example"><div class="equip-tile"><span class="equip-monster">モンスター</span></div><b>モンスターあり</b><small>プレイできる</small></div>
+        <div class="equip-example"><div class="equip-tile"><span class="equip-empty">空の領土</span></div><b>モンスターなし</b><small>配置できる</small></div>
+        <div class="equip-example"><div class="equip-tile"><span class="equip-monster">モンスター</span></div><b>モンスターあり</b><small>配置できる・未装備ならそのまま装備</small></div>
         <div class="equip-example"><div class="equip-tile"><span class="equip-card">装備A</span></div><b>すでに装備あり</b><small>追加できる</small></div>
       </div>
-      <p class="equip-caption">※ モンスターの召喚と装備のプレイは合わせて1ターンに1回です。</p>
+      <p class="equip-caption">※ モンスターの召喚と装備の配置は合わせて1ターンに1回です。</p>
     </article>
 
     <article class="equip-section">
       <span class="equip-step">RULE 02 / CHOOSE</span><h3>装備していないモンスターは1枚選ぶ</h3>
-      <p>装備していないモンスターが装備のある領土に移動したときや、装備のある領土に召喚されたときは、<strong>必ず装備を1枚選びます</strong>。複数ある場合は、そのモンスターの持ち主が自由に選びます。</p>
+      <p>装備していないモンスターが装備のある領土に移動したときや、装備のある領土に召喚されたときは、<strong>必ず装備を1枚選びます</strong>。複数ある場合は、そのモンスターの持ち主が自由に選びます。装備を選ぶルールは、自分・相手どちらのモンスターにも適用されます。</p>
       <div class="equip-diagram"><div class="equip-board-title">例：装備A・B・Cがある領土</div><div class="equip-choice"><span class="equip-card">装備A</span><span class="equip-card equip-selected">装備B <em>選択</em></span><span class="equip-card">装備C</span></div><div class="equip-arrow">↓ モンスターの持ち主が選ぶ</div><div class="equip-result"><span class="equip-monster">モンスター</span><span class="equip-card">装備B</span></div><p>装備Bを使用。装備AとCはその領土に残ります。</p></div>
     </article>
 

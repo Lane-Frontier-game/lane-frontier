@@ -3518,3 +3518,52 @@ img {
   white-space: nowrap;
   word-break: keep-all;
 }
+/* CHAPTER 07：前進・後退の図解（2026-10 追加） */
+.guide-page .guide-direction-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 20px;
+  margin: 24px 0 16px;
+}
+.guide-page .guide-direction-card {
+  min-width: 0;
+  margin: 0;
+  padding: 20px;
+  border: 1px solid #e5d9ca;
+  border-radius: 12px;
+  background: #faf7f2;
+  text-align: center;
+}
+.guide-page .guide-direction-card h4 {
+  margin: 0 0 12px;
+  color: #493729;
+  font-size: 20px;
+}
+.guide-page .guide-direction-card h4 span {
+  display: block;
+  color: #96734f;
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: .15em;
+}
+.guide-page .guide-direction-card img {
+  display: block;
+  width: 100%;
+  max-height: 360px;
+  margin: 0 auto;
+  object-fit: contain;
+}
+.guide-page .guide-direction-card figcaption {
+  margin-top: 12px;
+  color: #6d5d4d;
+  font-size: 14px;
+  font-weight: 700;
+}
+.guide-page .guide-direction-note {
+  color: #817163;
+  font-size: 13px;
+}
+@media (max-width: 640px) {
+  .guide-page .guide-direction-grid { grid-template-columns: 1fr; gap: 14px; }
+  .guide-page .guide-direction-card { padding: 16px; }
+}

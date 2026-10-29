@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="レーンフロンティアからのお知らせです。">
+  <title>お知らせ | Lane Frontier</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="news-site.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container news-simple-header">
+      <a class="brand" href="index.html"><img src="hero-logo.jpg" alt="" class="lf-header-logo"><span class="brand-name">Lane Frontier</span></a>
+      <a class="news-back-link" href="news-list.html">一覧に戻る</a>
+    </div>
+  </header>
+  <main class="news-page-main">
+    <article class="container news-article" id="news-article">
+      <p class="news-eyebrow">NEWS &amp; UPDATES</p>
+      <time id="news-article-date" class="news-article-date"></time>
+      <h1 class="news-page-title" id="news-article-title">記事を読み込み中…</h1>
+      <img id="news-article-image" class="news-article-image" alt="記事の画像" hidden>
+      <div class="news-article-body" id="news-article-body"></div>
+      <p class="news-status" id="news-article-status" role="status"></p>
+      <a class="news-outline-button news-return-button" href="news-list.html">← お知らせ一覧へ戻る</a>
+    </article>
+  </main>
+  <footer class="site-footer"><div class="container footer-inner"><small>© Lane Frontier</small><a href="index.html">公式ホームページ</a></div></footer>
+  <script src="site-config.js"></script>
+  <script src="news-public.js"></script>
+</body>
+</html>

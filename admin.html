@@ -1,0 +1,200 @@
+
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="noindex">
+  <title>お知らせ管理 | Lane Frontier</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="news-site.css">
+  
+<style>
+  .site-header .news-simple-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+  }
+
+  .site-header .news-simple-header .brand {
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    width: auto;
+  }
+
+  .site-header .news-simple-header .brand img {
+    width: 40px;
+    height: 40px;
+    max-width: 40px;
+    max-height: 40px;
+    object-fit: contain;
+    display: block;
+  }
+</style>
+
+</head>
+
+<body>
+  <header class="site-header">
+    <div class="container news-simple-header">
+      <a class="brand" href="index.html">
+        <img src="hero-logo.jpg" alt="">
+        <span class="brand-name">Lane Frontier</span>
+      </a>
+      <a class="news-back-link" href="index.html">
+        公式サイトに戻る
+      </a>
+    </div>
+  </header>
+
+  <main class="news-page-main">
+    <div class="container news-page-container">
+
+      <p class="news-eyebrow">MANAGEMENT</p>
+      <h1 class="news-page-title">お知らせ管理</h1>
+      <p class="news-page-lead">
+        レーンフロンティア公式サイトのお知らせを管理します。
+      </p>
+
+      <p id="admin-status" role="status" aria-live="polite"></p>
+
+      <!-- ログイン -->
+      <section id="admin-login">
+        <h2>メンバーログイン</h2>
+        <p>投稿権限を持つメンバーのみ利用できます。</p>
+        <button id="login-button" type="button">
+          ログイン
+        </button>
+        <button id="switch-account-button" type="button" hidden>
+          別のアカウントでログイン
+        </button>
+      </section>
+
+      <!-- ログイン後の管理画面 -->
+      <div id="admin-dashboard" hidden>
+
+        <section>
+          <p id="admin-welcome"></p>
+          <button id="logout-button" type="button">
+            ログアウト
+          </button>
+        </section>
+
+        <!-- 記事作成・編集 -->
+        <section>
+          <h2 id="editor-heading">記事を作成</h2>
+
+          <form id="post-form">
+            <input id="edit-post-id" type="hidden">
+
+            <p>
+              <label for="post-title">記事タイトル</label>
+              <input
+                id="post-title"
+                type="text"
+                maxlength="120"
+                required
+              >
+            </p>
+
+            <p>
+              <label for="post-body">記事本文</label>
+              <textarea
+                id="post-body"
+                rows="12"
+                required
+              ></textarea>
+            </p>
+
+            <p>
+              <label for="post-image">記事の画像</label>
+              <input
+                id="post-image"
+                type="file"
+                accept="image/png,image/jpeg,image/webp"
+              >
+            </p>
+
+            <img
+              id="post-image-preview"
+              alt="画像プレビュー"
+              hidden
+            >
+
+            <p>
+              <label>
+                <input id="remove-post-image" type="checkbox">
+                現在の画像を削除
+              </label>
+            </p>
+
+            <div>
+              <button id="save-draft" type="submit" value="draft">
+                下書き保存
+              </button>
+              <button id="publish-post" type="submit" value="published">
+                公開する
+              </button>
+              <button id="new-post-button" type="button">
+                新しい記事を作成
+              </button>
+            </div>
+          </form>
+        </section>
+
+        <!-- 記事一覧 -->
+        <section>
+          <h2>記事一覧</h2>
+          <p id="post-list-hint"></p>
+
+          <button id="refresh-posts" type="button">
+            一覧を更新
+          </button>
+
+          <div id="admin-post-list"></div>
+
+          <button id="admin-more-posts" type="button" hidden>
+            さらに表示
+          </button>
+        </section>
+
+        <!-- 管理者専用 -->
+        <section id="member-panel" hidden>
+          <h2>メンバー管理</h2>
+          <div id="admin-member-list"></div>
+
+          <h3>メンバーを登録</h3>
+
+          <form id="member-form">
+            <p>
+              <label for="member-sub">Auth0ユーザーID</label>
+              <input id="member-sub" type="text" required>
+            </p>
+
+            <p>
+              <label for="member-name">表示名</label>
+              <input id="member-name" type="text" required>
+            </p>
+
+            <p>
+              <label for="member-role">権限</label>
+              <select id="member-role" required>
+                <option value="editor">投稿メンバー</option>
+                <option value="admin">管理者</option>
+              </select>
+            </p>
+
+            <button type="submit">メンバーを登録</button>
+          </form>
+        </section>
+
+      </div>
+    </div>
+  </main>
+
+  <script src="site-config.js"></script>
+  <script src="admin-app.js"></script>
+</body>
+</html>
